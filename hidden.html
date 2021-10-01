@@ -17,7 +17,6 @@
     <input type="button" onclick=processGuess() value="Check the guess">
 </form>
 
-
 <p id="result">Results </p>
 
 <script> 
@@ -43,8 +42,23 @@
             alert("Please guess again")
         }            
     }
+    /*beginning part 4 */
+    var currentImage = 0
+    function rotateImage(){
+        switch(currentImage){
+            case 0:
+
+                break;
+            case 1:
+                break;
+            case 2:
+                break;
+        }
+    }
 
 </script>
-
+    <div class="container">
+        <img src="lion.jpg" height="200" width="200" onclick=rotateImage()>
+    </div>
 </body>
 </html> 
