@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+ <title>Assignment 6 Part 5</title>
+<body>
+
+<h2>Sam Computes</h2>
+
+<form>
+    <label for="first_val">Enter a number </label>
+    <input type ="number" id="first_val" name="first_val" value=6> <br>
+
+    <label for="sec_val">Enter a number </label>
+    <input type ="number" id="sec_val" name="sec_val" value=2> <br>
+
+    <input type="button" onclick="permutations()" value="Compute">
+</form>
+<p id="result">   </p>
+<script> 
+
+    function permutations(){
+        var product = 1;
+        first = document.getElementById("first_val").value
+        second = document.getElementById("sec_val").value
+        result = document.getElementById("result")
+        for(let i = second;i < first;i++){
+            product = i * product;
+        }
+        result.innerHTML = first + " permutes " + second + " is " + product;
+        
+    }
+
+</script>
+<form>
+    <input type="radio" id="rg1_red" name="color" value="red"   
+      checked >
+    <label for="rg1_red">Red</label></br>
+  
+    <input type="radio" id="rg1_blue" name="color" 
+       value="blue">
+    <label for="rg1_blue">Blue</label></br>
+  
+    <input type="radio" id="rg1_green" name="color"   
+       value="green">
+    <label for="rg1_green">Green</label></br>
+
+    <input type="button" onclick="resolveRadio()" value="Get values from radio group">
+  </form>
+<p id="result">   </p>
+
+</body>
+</html> 
