@@ -47,18 +47,25 @@
     function rotateImage(){
         switch(currentImage){
             case 0:
-
+                document.getElementById("animals").src = "lion.jpg"
+                currentImage ++;
                 break;
             case 1:
+                document.getElementById("animals").src = "owl.jpg"
+                currentImage ++;
                 break;
             case 2:
+                document.getElementById("animals").src = "narwhal.jpg"
+                currentImage = 0;
                 break;
         }
     }
 
+
 </script>
     <div class="container">
-        <img src="lion.jpg" height="200" width="200" onclick=rotateImage()>
+        <img src="lion.jpg" id="animals" alt="owl" height="200" width="200" onclick=rotateImage(this)>
     </div>
+    onclick="document.getElem"
 </body>
 </html> 
