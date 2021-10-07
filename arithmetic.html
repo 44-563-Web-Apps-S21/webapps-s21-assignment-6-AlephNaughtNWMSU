@@ -31,21 +31,48 @@
 
 </script>
 <form>
-    <input type="radio" id="rg1_red" name="color" value="red"   
+    <input type="radio" id="radio_plus" value="plus" onclick="processRadio()"   
       checked >
-    <label for="rg1_red">Red</label></br>
+    <label for="radio_plus">+</label></br>
   
-    <input type="radio" id="rg1_blue" name="color" 
+    <input type="radio" id="radio_minus" value="minus" onclick="processRadio()" 
        value="blue">
-    <label for="rg1_blue">Blue</label></br>
+    <label for="radio_minus">-</label></br>
   
-    <input type="radio" id="rg1_green" name="color"   
+    <input type="radio" id="radio_multi" value="multi" onclick="processRadio()"  
        value="green">
-    <label for="rg1_green">Green</label></br>
+    <label for="radio_multi">*</label></br>
 
-    <input type="button" onclick="resolveRadio()" value="Get values from radio group">
+    <input type="radio" id="radio_div" value="div" onclick="processRadio()"
+       value="green">
+    <label for="radio_div">/</label></br>
+
+    <input type="button" onclick="processRadio()" value="Check">
   </form>
-<p id="result">   </p>
+    <p id="result2"> Results  </p>
+    <script>
+        function processRadio(){
+        first = document.getElementById("first_val").value
+        second = document.getElementById("sec_val").value
+        add = document.getElementById("plus").checked
+        sub = document.getElementById("minus").checked
+        mul = document.getElementById("times").checked
+        div = document.getElementById("divide").checked
+        if (add = true){
+            result = first + second
+        }
+        else if (sub = true){
+            result = first - second
+        }
+        else if (mul = true){
+            result = first * second
+        }
+        else if (div = true){
+            result = first / second
+        }
+        output = document.getElementById("result2").innerHTML = "The Result is: " + result
+    }
+    </script>
 
 </body>
 </html> 
